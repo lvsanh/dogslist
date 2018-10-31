@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DogsListContainer from './components/DogsListContainer';
 
 class App extends Component {
 
@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <main>
+          <DogsListContainer />
         </main>
       </div>
     );
