@@ -5,6 +5,12 @@ import DogsList from './DogsList'
 export default class DogsListContainer extends Component {
   state = { dogBreeds: null }
 
+  updateBreeds(breeds) {
+    this.setState({
+      dogBreeds: breeds
+    })
+  }
+  
   componentDidMount() {
     request
       .get('https://dog.ceo/api/breeds/list/all')
@@ -15,13 +21,7 @@ export default class DogsListContainer extends Component {
       .catch(console.error)
   }
 
-  updateBreeds(breeds) {
-    this.setState({
-      dogBreeds: breeds
-    })
-  }
-
   render() {
-    return <DogsList dogBreeds={this.state.dogBreeds} />
+    return <DogsList whatever={this.state.dogBreeds} />
   }
 }
