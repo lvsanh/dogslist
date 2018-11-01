@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function DogBreedImages(props) {
-  const images = props.images
+  const {images} = props
+  //const images = props.images
+  
     return (
             <div className="dog-breed-images">
                 <h1>Dogs Breed Images</h1>
@@ -17,3 +19,5 @@ export default function DogBreedImages(props) {
             </div>
         )
 }
+
+//DogBreedImages.propTypes ???
